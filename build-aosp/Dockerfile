@@ -6,9 +6,9 @@
 # ===========================================================================================
 
 # FROM gmacario/easy-build
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
-MAINTAINER Gianpaolo Macario <gmacario@gmail.com>
+MAINTAINER Aaron Randelman <sooti85@gmail.com>
 
 # See https://github.com/docker/docker/issues/4032
 #ENV DEBIAN_FRONTEND noninteractive
@@ -31,6 +31,9 @@ RUN apt-get -y install curl git mc rsync screen tig
 #
 # Java 7: for Lollipop through Marshmallow
 RUN apt-get -y install openjdk-7-jdk
+#
+# Add Wget and nano
+RUN apt-get -y install nano wget
 #
 # Java 6: for Gingerbread through KitKat
 # Java 5: for Cupcake through Froyo
